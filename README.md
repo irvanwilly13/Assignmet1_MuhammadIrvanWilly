@@ -1,3 +1,36 @@
+# Transaction Management System
+
+A Swift project to manage financial transactions, including adding, filtering, deleting, and calculating totals for transactions.
+
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Tech Stack](#tech-stack)
+
+## Features
+
+- *Add Transactions*: Add new transactions with details like name, category, price, and date.
+- *Add Categories*: Add unique categories to the system.
+- *Filter Transactions*: Filter transactions by category.
+- *Calculate Totals*: Calculate the total amount of transactions for a specific category.
+- *Check Balance: Checking Balance for user
+
+## Installation
+
+1. *Clone the repository*
+   sh
+   git clone https://github.com/irvanwilly13/Assignmet1_MuhammadIrvanWilly.git
+   
+
+2. *Open the project*
+   Open the cloned repository in Xcode.
+
+## Usage
+
+Here is an example of how to use the Transaction struct and FinanceManajemen class:
+
+```swift
 import UIKit
 
 // MARK: ASSIGNMENT 1
@@ -7,6 +40,7 @@ enum TypeTransaction: String {
     case expense
 }
 
+// MARK: Struct of Transaction
 struct Transaction {
     var nama: String
     var category: TypeTransaction
@@ -14,6 +48,7 @@ struct Transaction {
     var date: Date = .now
 }
 
+// MARK: Protocol Finance Manajemen
 protocol FinanceManajemen {
     var listTransaction: [Transaction] {get set}
     func checkBalance()
@@ -114,3 +149,12 @@ pengguna1.tampilkanPengguna()
 pengguna2.tambahTransaksi(nama: "Tabungan", category: .income, amount: 3000)
 pengguna2.tambahTransaksi(nama: "sepatu", category: .expense, amount: 5000)
 pengguna2.tampilkanPengguna()
+
+```
+
+
+## Tech Stack
+
+- *Language*: Swift
+- *IDE*: Xcode
+
